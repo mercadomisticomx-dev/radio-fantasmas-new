@@ -25,7 +25,7 @@
     }
     </script>
 
-  <style>
+ <style>
     * {
         margin: 0;
         padding: 0;
@@ -35,7 +35,7 @@
     body, html {
         height: 100%;
         width: 100%;
-        background-color: #050a0f; /* Color base oscuro */
+        background-color: #050a0f; 
         overflow: hidden; 
         display: flex;
         align-items: center;
@@ -50,11 +50,10 @@
         justify-content: center;
     }
 
-    /* CONFIGURACIÓN PARA ESCRITORIO */
+    /* ESCRITORIO: Marco fino y elegante */
     .hero-image {
-        /* Marco delgado: la imagen ocupa el 92% de la pantalla */
-        max-width: 92vw; 
-        max-height: 92vh;
+        max-width: 95vw; 
+        max-height: 95vh;
         width: auto;
         height: auto;
         object-fit: contain; 
@@ -62,27 +61,24 @@
         animation: fadeIn 2.5s ease-in-out;
     }
 
-    /* CONFIGURACIÓN PARA MÓVIL */
+    /* MÓVIL: Máxima altura con recorte mínimo lateral */
     @media (max-width: 768px) {
-        .hero-container {
-            padding: 0; /* Eliminamos cualquier margen en móvil */
-        }
-        
         .hero-image {
-            /* Forzamos a que ocupe el 100% de la pantalla */
-            max-width: 100vw;
-            max-height: 100vh;
-            width: 100vw;
-            height: 100vh;
+            /* Forzamos el tamaño al 95% de la pantalla */
+            width: 95vw;
+            height: 95vh;
             
-            /* 'cover' hace que la imagen llene el alto total, 
-               recortando los lados si es necesario */
+            /* 'cover' asegura que no haya huecos arriba/abajo. 
+               Al estar al 95%, el recorte lateral es mucho menor 
+               que si estuviera al 100% */
             object-fit: cover; 
             object-position: center;
+            
+            /* Suavizamos los bordes para que el "marco" no sea brusco */
+            border-radius: 4px; 
         }
     }
 
-    /* Ocultar contenido para SEO */
     .seo-content {
         position: absolute;
         width: 1px;
