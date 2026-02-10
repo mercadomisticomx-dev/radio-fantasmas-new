@@ -25,66 +25,66 @@
     }
     </script>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+   <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body, html {
-            height: 100%;
-            width: 100%;
-            background-color: #050a0f; /* Color base oscuro */
-            overflow: hidden; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    body, html {
+        height: 100%;
+        width: 100%;
+        background-color: #050a0f; /* Color base oscuro */
+        overflow: hidden; /* Evita que aparezcan barras de scroll */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .hero-container {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .hero-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    background-color: #050a0f; 
+}
 
-        .hero-image {
-    width: 100vw;   /* Ocupa todo el ancho visual */
-    height: 100vh;  /* Ocupa todo el alto visual */
-    object-fit: cover; /* Ajusta la imagen para llenar el contenedor recortando lo mínimo necesario */
-    object-position: center; /* Asegura que el centro de la imagen siempre esté visible */
+.hero-image {
+    /* Limitamos el tamaño al 80% del ancho y alto de la ventana */
+    max-width: 80vw; 
+    max-height: 80vh;
+    
+    /* Mantenemos proporciones originales */
+    width: auto;
+    height: auto;
+    
+    /* Aseguramos que se comporte bien como bloque */
+    display: block;
+    object-fit: contain;
+    
     animation: fadeIn 2.5s ease-in-out;
 }
 
-        /* Ocultar contenido para humanos, mantener para Google (SEO) */
-        .seo-content {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* En dispositivos móviles muy delgados, podrías preferir 'cover' 
-           pero 'contain' asegura que se vea todo el arte del disco */
-     @media (max-width: 768px) {
-    .hero-image {
-        object-fit: contain; 
+    /* Ocultar contenido para SEO */
+    .seo-content {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
     }
-}
-        }
-    </style>
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
 </head>
 <body>
 
