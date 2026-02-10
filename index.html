@@ -25,7 +25,7 @@
     }
     </script>
 
- <style>
+<style>
     * {
         margin: 0;
         padding: 0;
@@ -35,8 +35,8 @@
     body, html {
         height: 100%;
         width: 100%;
-        background-color: #050a0f; 
-        overflow: hidden; 
+        background-color: #050a0f; /* Color de fondo oscuro */
+        overflow: hidden; /* Evita scrolls innecesarios */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -48,37 +48,40 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0; 
     }
 
-    /* ESCRITORIO: Marco fino y elegante */
+    /* CONFIGURACIÓN GENERAL (ESCRITORIO Y MÓVIL) */
     .hero-image {
-        max-width: 95vw; 
-        max-height: 95vh;
+        /* El '92' crea ese ligero marco que pediste (deja 4% de espacio en cada lado) */
+        max-width: 92vw; 
+        max-height: 92vh;
+        
+        /* 'contain' garantiza que la imagen se vea COMPLETA sin recortarse */
+        object-fit: contain; 
+        
+        /* Mantiene la proporción original de la imagen */
         width: auto;
         height: auto;
-        object-fit: contain; 
+        
         display: block;
         animation: fadeIn 2.5s ease-in-out;
     }
 
-    /* MÓVIL: Máxima altura con recorte mínimo lateral */
+    /* AJUSTE ESPECÍFICO PARA MÓVIL (iPhones y otros) */
     @media (max-width: 768px) {
         .hero-image {
-            /* Forzamos el tamaño al 95% de la pantalla */
-            width: 95vw;
-            height: 95vh;
+            /* En móvil mantenemos el marco ligero del 90% para que no toque los bordes */
+            max-width: 90vw;
+            max-height: 90vh;
             
-            /* 'cover' asegura que no haya huecos arriba/abajo. 
-               Al estar al 95%, el recorte lateral es mucho menor 
-               que si estuviera al 100% */
-            object-fit: cover; 
+            /* Aseguramos que siga viéndose completa y centrada */
+            object-fit: contain;
             object-position: center;
-            
-            /* Suavizamos los bordes para que el "marco" no sea brusco */
-            border-radius: 4px; 
         }
     }
 
+    /* Ocultar contenido para SEO */
     .seo-content {
         position: absolute;
         width: 1px;
