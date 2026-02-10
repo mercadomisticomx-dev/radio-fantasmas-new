@@ -25,7 +25,7 @@
     }
     </script>
 
-   <style>
+  <style>
     * {
         margin: 0;
         padding: 0;
@@ -36,36 +36,51 @@
         height: 100%;
         width: 100%;
         background-color: #050a0f; /* Color base oscuro */
-        overflow: hidden; /* Evita que aparezcan barras de scroll */
+        overflow: hidden; 
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .hero-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
-    background-color: #050a0f; 
-}
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.hero-image {
-    /* Limitamos el tamaño al 80% del ancho y alto de la ventana */
-    max-width: 80vw; 
-    max-height: 80vh;
-    
-    /* Mantenemos proporciones originales */
-    width: auto;
-    height: auto;
-    
-    /* Aseguramos que se comporte bien como bloque */
-    display: block;
-    object-fit: contain;
-    
-    animation: fadeIn 2.5s ease-in-out;
-}
+    /* CONFIGURACIÓN PARA ESCRITORIO */
+    .hero-image {
+        /* Marco delgado: la imagen ocupa el 92% de la pantalla */
+        max-width: 92vw; 
+        max-height: 92vh;
+        width: auto;
+        height: auto;
+        object-fit: contain; 
+        display: block;
+        animation: fadeIn 2.5s ease-in-out;
+    }
+
+    /* CONFIGURACIÓN PARA MÓVIL */
+    @media (max-width: 768px) {
+        .hero-container {
+            padding: 0; /* Eliminamos cualquier margen en móvil */
+        }
+        
+        .hero-image {
+            /* Forzamos a que ocupe el 100% de la pantalla */
+            max-width: 100vw;
+            max-height: 100vh;
+            width: 100vw;
+            height: 100vh;
+            
+            /* 'cover' hace que la imagen llene el alto total, 
+               recortando los lados si es necesario */
+            object-fit: cover; 
+            object-position: center;
+        }
+    }
 
     /* Ocultar contenido para SEO */
     .seo-content {
