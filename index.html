@@ -6,11 +6,11 @@
     <title>Los Radio Fantasmas | La Leyenda Continúa - Podcast y Misterio</title>
     
     <meta name="description" content="El regreso de Los Radio Fantasmas tras 40 años. Historias paranormales, leyendas de Guadalajara (La Llorona, Casa de los Perros) y misterios. Podcast oficial y tienda mística.">
-    <meta name="keywords" content="Radio Fantasmas, radio fantasma, paranormal, leyendas, fantasmas, podcast terror México, la llorona, la casa de los perros, tuneles subterraneos guadalajara, vida despues de la muerte, reencarnacion, libreria esoterica kundalini, misterio, radio guadalajara, terror antiguo">
+    <meta name="keywords" content="Radio Fantasmas, radio fantasma, paranormal, leyendas, fantasmas, podcast terror México, la llorona, la casa de los perros, tuneles subterraneos guadalajara, vida despues de la muerte, reencarnacion, libreria esoterica kundalini, misterio, terror clásico">
     <link rel="canonical" href="https://losradiofantasmas.com.mx/">
 
     <meta property="og:title" content="Los Radio Fantasmas - Regreso Oficial">
-    <meta property="og:description" content="Más de 40 años de misterio regresan. Únete a la leyenda en su nuevo formato.">
+    <meta property="og:description" content="Más de 40 años de misterio regresan. Únete a la leyenda en su nuevo formato podcast.">
     <meta property="og:image" content="banner%20los%20radio%20fantasmas.jpg">
     <meta property="og:url" content="https://losradiofantasmas.com.mx">
     <meta property="og:type" content="website">
@@ -21,13 +21,7 @@
       "@type": "BroadcastService",
       "name": "Los Radio Fantasmas",
       "description": "Programa legendario de temas paranormales y leyendas con más de 40 años de historia.",
-      "url": "https://losradiofantasmas.com.mx",
-      "broadcastDisplayName": "Los Radio Fantasmas",
-      "hasPart": {
-        "@type": "CreativeWorkSeries",
-        "name": "Los Radio Fantasmas Podcast",
-        "genre": ["Terror", "Paranormal", "Misterio"]
-      }
+      "url": "https://losradiofantasmas.com.mx"
     }
     </script>
 
@@ -41,8 +35,8 @@
         body, html {
             height: 100%;
             width: 100%;
-            background-color: #050a0f;
-            overflow: hidden; /* Evita scrolls accidentales */
+            background-color: #050a0f; /* Color base oscuro */
+            overflow: hidden; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -54,20 +48,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px; /* Margen mínimo de seguridad */
         }
 
         .hero-image {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain; /* Asegura que la imagen NUNCA se corte */
-            box-shadow: 0 0 50px rgba(0,0,0,0.8);
-            animation: fadeIn 3s ease-in-out;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Muestra la imagen completa sin recortes */
+            animation: fadeIn 2.5s ease-in-out;
         }
 
-        /* Texto oculto estratégicamente para buscadores */
+        /* Ocultar contenido para humanos, mantener para Google (SEO) */
         .seo-content {
             position: absolute;
             width: 1px;
@@ -85,10 +75,11 @@
             to { opacity: 1; }
         }
 
-        /* Ajuste para móviles: si la pantalla es muy alta, asegura que la imagen no se pierda */
+        /* En dispositivos móviles muy delgados, podrías preferir 'cover' 
+           pero 'contain' asegura que se vea todo el arte del disco */
         @media (max-width: 768px) {
-            .hero-container {
-                padding: 5px;
+            .hero-image {
+                object-fit: contain; 
             }
         }
     </style>
@@ -96,15 +87,19 @@
 <body>
 
     <main class="hero-container">
-        <img src="banner%20los%20radio%20fantasmas.jpg" 
-             alt="Los Radio Fantasmas - La leyenda del misterio y lo paranormal en Guadalajara regresa. Más de 40 años de historias y leyendas." 
-             class="hero-image">
+        <picture>
+            <source media="(max-width: 768px)" srcset="banner%20los%20radio%20fantasmas%20movil.jpg">
+            
+            <img src="banner%20los%20radio%20fantasmas.jpg" 
+                 alt="Los Radio Fantasmas - Regreso oficial tras 40 años de misterio y leyendas en Guadalajara. Próximamente podcast y tienda." 
+                 class="hero-image">
+        </picture>
         
         <article class="seo-content">
             <h1>Los Radio Fantasmas</h1>
-            <p>Bienvenidos al sitio oficial de <strong>Los Radio Fantasmas</strong>. Un legado de más de 40 años en la radio mexicana explorando temas de <strong>reencarnación</strong>, <strong>vida después de la muerte</strong> y <strong>apariciones</strong>.</p>
-            <p>Especialistas en las leyendas de Guadalajara, Jalisco, como <strong>La Llorona</strong>, los misterios de la <strong>Casa de los Perros</strong> y los <strong>túneles subterráneos de Guadalajara</strong>.</p>
-         </article>
+            <p>El programa clásico de radio sobre <strong>temas paranormales</strong> y <strong>leyendas</strong> regresa tras 40 años de historia. Exploramos la <strong>reencarnación</strong>, la <strong>vida después de la muerte</strong> y casos icónicos de Guadalajara, Jalisco.</p>
+            <p>Historias de <strong>La Llorona</strong>, los misterios de la <strong>Casa de los Perros</strong> y los <strong>túneles subterráneos</strong>. Muy pronto disponible en <strong>podcast</strong> y con nuestra <strong>tienda mística</strong> oficial, vinculada a la <strong>librería esotérica Kundalini</strong>.</p>
+        </article>
     </main>
 
 </body>
