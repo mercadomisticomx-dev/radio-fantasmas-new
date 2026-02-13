@@ -2,119 +2,133 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Los Radio Fantasmas | La Leyenda Continúa | CASOS Y COSAS DEL MÁS ALLÁ </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="El regreso de Los Radio Fantasmas tras 40 años. Historias paranormales, leyendas de Guadalajara (La Llorona, Casa de los Perros) y misterios.">
-    <meta name="keywords" content="Radio Fantasmas, radio fantasma, paranormal, leyendas, fantasmas, podcast terror México, la llorona, la casa de los perros, tuneles subterraneos guadalajara, vida despues de la muerte, reencarnacion, libreria esoterica kundalini, misterio, terror clásico">
-    <link rel="canonical" href="https://losradiofantasmas.com.mx/">
-
-    <meta property="og:title" content="Los Radio Fantasmas - Regreso Oficial">
-    <meta property="og:description" content="Más de 40 años de misterio regresan. Únete a la leyenda en su nuevo formato podcast.">
-    <meta property="og:image" content="banner%20los%20radio%20fantasmas.jpg">
-    <meta property="og:url" content="https://losradiofantasmas.com.mx">
+    <title>Radio Fantasmas | El Regreso del Terror y lo Paranormal</title>
+    
+    <meta name="description" content="Radio Fantasmas regresa tras 40 años. Escucha podcast de leyendas, La Llorona, Casa de los Perros y misterios de Guadalajara.">
+    <meta name="keywords" content="Radio Fantasmas, podcast terror, leyendas guadalajara, paranormal, vida despues de la muerte, libreria esoterica kundalini">
+    
+    <link rel="canonical" href="https://radiofantasmas.com.mx/">
+    
+    <meta property="og:title" content="Radio Fantasmas - La Leyenda Continúa">
+    <meta property="og:description" content="El programa legendario de misterio regresa en formato digital.">
+    <meta property="og:image" content="https://radiofantasmas.com.mx/banner%20los%20radio%20fantasmas.jpg">
+    <meta property="og:url" content="https://radiofantasmas.com.mx">
     <meta property="og:type" content="website">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BroadcastService",
-      "name": "Los Radio Fantasmas",
+      "@type": "RadioSeries",
+      "name": "Radio Fantasmas",
       "description": "Programa legendario de temas paranormales y leyendas con más de 40 años de historia.",
-      "url": "https://losradiofantasmas.com.mx"
+      "genre": "Paranormal, Horror, Mystery",
+      "url": "https://radiofantasmas.com.mx"
     }
     </script>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body, html {
-        height: 100%;
-        width: 100%;
-        background-color: #050a0f; /* Color de fondo oscuro */
-        overflow: hidden; /* Evita scrolls innecesarios */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-container {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0; 
-    }
-
-    /* CONFIGURACIÓN GENERAL (ESCRITORIO Y MÓVIL) */
-    .hero-image {
-        /* El '92' crea ese ligero marco que pediste (deja 4% de espacio en cada lado) */
-        max-width: 95vw; 
-        max-height: 95vh;
-        
-        /* 'contain' garantiza que la imagen se vea COMPLETA sin recortarse */
-        object-fit: contain; 
-        
-        /* Mantiene la proporción original de la imagen */
-        width: auto;
-        height: auto;
-        
-        display: block;
-        animation: fadeIn 2.5s ease-in-out;
-    }
-
-    /* AJUSTE ESPECÍFICO PARA MÓVIL (iPhones y otros) */
-    @media (max-width: 768px) {
-        .hero-image {
-            /* En móvil mantenemos el marco ligero del 90% para que no toque los bordes */
-            max-width: 90vw;
-            max-height: 90vh;
-            
-            /* Aseguramos que siga viéndose completa y centrada */
-            object-fit: contain;
-            object-position: center;
+    <style>
+        :root {
+            --bg-color: #050a0f;
+            --text-color: #a0a0a0;
+            --highlight: #ffffff;
         }
-    }
 
-    /* Ocultar contenido para SEO */
-    .seo-content {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-</style>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* CONTENEDOR PRINCIPAL: Centra la imagen pero permite scroll si es necesario */
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* IMAGEN: Optimizada para no deformarse */
+        .hero-image {
+            width: 100%;
+            max-width: 800px; /* Limita el ancho máximo para que no se vea gigante en PC */
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra estética */
+        }
+
+        /* TEXTO VISIBLE (CRUCIAL PARA SEO) */
+        /* Ya no está oculto, ahora es parte del diseño minimalista */
+        .info-content {
+            max-width: 700px;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            padding: 0 10px 40px 10px;
+            opacity: 0.8;
+        }
+
+        .info-content h1 {
+            color: var(--highlight);
+            font-size: 1.5rem; /* No muy grande, pero semánticamente es un H1 */
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .info-content p {
+            margin-bottom: 15px;
+        }
+
+        .info-content strong {
+            color: #dcdcdc;
+            font-weight: normal; 
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-image {
+                max-width: 100%;
+            }
+            .info-content h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <main class="hero-container">
+    <main class="main-container">
         <picture>
             <source media="(max-width: 768px)" srcset="banner%20los%20radio%20fantasmas%20movil.jpg">
-            
             <img src="banner%20los%20radio%20fantasmas.jpg" 
-                 alt="Los Radio Fantasmas - Regreso oficial tras 40 años de misterio y leyendas en Guadalajara. Próximamente podcast y tienda." 
-                 class="hero-image">
+                 alt="Radio Fantasmas - Regreso oficial del podcast de terror y leyendas en Guadalajara" 
+                 class="hero-image"
+                 width="800" height="800"> 
         </picture>
         
-        <article class="seo-content">
-            <h1>Los Radio Fantasmas</h1>
-            <p>El programa clásico de radio sobre <strong>temas paranormales</strong> y <strong>leyendas</strong> regresa tras 40 años de historia. Exploramos la <strong>reencarnación</strong>, la <strong>vida después de la muerte</strong> y casos icónicos de Guadalajara, Jalisco.</p>
-            <p>Historias de <strong>La Llorona</strong>, los misterios de la <strong>Casa de los Perros</strong> y los <strong>túneles subterráneos</strong>. Muy pronto disponible en <strong>podcast</strong> y con nuestra <strong>tienda mística</strong> oficial, vinculada a la <strong>librería esotérica Kundalini</strong>.</p>
+        <article class="info-content">
+            <h1>Radio Fantasmas: La Leyenda Continúa</h1>
+            <p>Tras 40 años de silencio, el programa clásico sobre <strong>temas paranormales</strong> regresa. Desde los misterios de la <strong>Casa de los Perros</strong> hasta los <strong>túneles subterráneos de Guadalajara</strong>.</p>
+            
+            <p>Próximamente disponible en formato <strong>podcast</strong>. Visita nuestra tienda mística vinculada a la <strong>librería esotérica Kundalini</strong>.</p>
         </article>
     </main>
 
